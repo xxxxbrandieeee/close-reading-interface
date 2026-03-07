@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="AI_CR_cover/AI_CR_cover_3.jpg" width="800" alt="Study interface">
+  <img src="AI_CR_cover/AI_CR_cover_3.jpg" width="500" alt="Study interface">
 </p>
 
 # AI and Close Reading - Interface
