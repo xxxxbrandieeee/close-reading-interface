@@ -6,10 +6,12 @@
 
 This repository contains the interface code for the experiment in the paper *["What Does AI Do for Cultural Interpretation? A Randomized Experiment on Close Reading Poems with Exposure to AI Interpretation"](https://doi.org/10.1145/3772318.3791727)*. The interface was used to study how AI assistance affects participants' interpretive performance and the pleasure they derive from close reading poems.
 
+The interface is designed to be reusable for human-centered experiments studying AI's impact on literary interpretation and other reading and writing tasks. Researchers can select from three pre-set configurations (no AI assistance, single AI interpretation, and multiple AI interpretations), which can be used individually or randomly assigned per participant. The number of reading materials, the pages included in each loop, and the AI panel behavior can also be configured.
+
 For trying out the study activity and viewing a summary of the paper, please visit our [project website](https://closereading-ai.app).
 
-- Main study data, behavioral data, and analysis code are available at [Data and Analysis](https://placeholder).
-- The data dictionary is available at [Data Dictionary](https://placeholder).
+- Main study data, behavioral data, and analysis code are available at [data and analysis](https://placeholder).
+- The data dictionary is available at [data dictionary](https://placeholder).
 
 If you have any questions, please contact Jiayin Zhi at jzhi@uchicago.edu.
 
@@ -26,9 +28,9 @@ If you have any questions, please contact Jiayin Zhi at jzhi@uchicago.edu.
 
 ## Frontend (`close-reading/`)
 
-### Study Procedure
+### Study Procedure (Pre-set)
 
-The interface walks participants through the following pages in order:
+The following is the pre-set procedure used in our study.
 
 | Page | Description |
 |------|-------------|
@@ -40,7 +42,7 @@ The interface walks participants through the following pages in order:
 | Page 5 | Main interpretation tasks |
 | Page 6 | Subjective experience ratings |
 
-Pages 4–6 repeat for each poem in randomized order (three poems by default). After all poems are completed:
+Pages 4–6 repeat for each poem in randomized order (three poems by default). Note that Page 8 (demographic questions) appears before the poem loop in our study, but can be moved to any position in the page order. After all poems are completed:
 
 | Page | Description |
 |------|-------------|
@@ -70,7 +72,9 @@ export let CURRENT_PROJECT_VARIANT: ProjectVariant = 'project2-random';
 
 ### Customization
 
-- **Reading materials and AI interpretations**: Edit `src/pageInfo.ts`
+The interface supports customization: selecting one of the three pre-built AI configurations or defining a new one, adjusting the number of poems, controlling which pages are included in each loop, and replacing the reading materials and AI interpretations.
+
+- **Reading materials and AI interpretations**: Edit `src/pageInfo.ts`.
 - **Page order or inclusion**: Edit the `pageInfo` array in `src/pageInfo.ts`. The array defines one loop through the per-poem pages; the study repeats this loop once per poem. Comment out any entry to skip that page:
 ```js
 [
@@ -80,13 +84,13 @@ export let CURRENT_PROJECT_VARIANT: ProjectVariant = 'project2-random';
 ]
 ```
 
+- **Number of poems**: Each inner array in `src/pageInfo.ts` corresponds to one poem. Remove an inner array to reduce the number of poems. The order is randomized across participants by default.
+
 - **AI panel behavior**: Adjust `showAiAnswers` (whether the AI panel appears) and `aiAnswerCount` (number of interpretations shown) in `src/config/projectConfig.ts` to create new configurations beyond the three base ones.
 
 ---
 
 ## Backend (`backend/`)
-
-Built with Node.js and Express. Handles participant data storage.
 
 ### Endpoint
 
@@ -96,7 +100,7 @@ Built with Node.js and Express. Handles participant data storage.
 
 ### Data Storage
 
-Participant responses are saved as timestamped JSON files under `backend/`, in subdirectories named after the configuration variant (e.g., `project2-type1/`, `project2-type2/`, `project2-type3/`). This applies both when running locally and on a server. These files are the raw input for the data processing pipeline — see the [Data Dictionary](https://placeholder).
+Participant responses are saved as timestamped JSON files under `backend/`, in subdirectories named after the configuration variant (e.g., `project2-type1/`, `project2-type2/`, `project2-type3/`). This applies both when running locally and on a server. These files are the raw input for the data processing pipeline — see the [data dictionary](https://placeholder).
 
 ---
 
@@ -147,9 +151,6 @@ This starts the server with PM2 for process management, auto-restart, and log ro
 ## Citation
 
 If you use this interface, please kindly cite:
-
-Jiayin Zhi, Hoyt Long, Richard Jean So, and Mina Lee. 2026. What Does AI Do for Cultural Interpretation? A Randomized Experiment on Close Reading Poems with Exposure to AI Interpretation. In *Proceedings of the 2026 CHI Conference on Human Factors in Computing Systems (CHI '26)*, April 13–17, 2026, Barcelona, Spain. ACM, New York, NY, USA, 18 pages. https://doi.org/10.1145/3772318.3791727
-
 ```bibtex
 @inproceedings{zhi2026what,
   author = {Zhi, Jiayin and Long, Hoyt and So, Richard Jean and Lee, Mina},
@@ -164,4 +165,3 @@ Jiayin Zhi, Hoyt Long, Richard Jean So, and Mina Lee. 2026. What Does AI Do for 
   doi = {10.1145/3772318.3791727}
 }
 ```
-- **AI panel behavior**: Adjust `showAiAnswers` (whether the AI panel appears) and `aiAnswerCount` (number of interpretations shown) in `src/config/projectConfig.ts` to create new configurations beyond the three base ones.
