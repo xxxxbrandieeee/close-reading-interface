@@ -1,7 +1,7 @@
 # AI and Close Reading - Interface
 
 <p align="center">
-  <img src="AI_CR_cover/AI_CR_cover.png" width="800" alt="Study interface">
+  <img src="AI_CR_cover/AI_CR_cover.jpg width="800" alt="Study interface">
   <br>
   <em>Caption text here</em>
 </p>
