@@ -46,7 +46,7 @@ Pages 4–6 repeat for each poem in randomized order (three poems by default). A
 
 The interface has three base configurations, differing only in the AI panel on Page 5 (the interpretation tasks page):
 
-| Variant | AI Panel | AI Interpretations Shown |
+| Variant | AI Panel | AI Interpretations Shown | 
 |---------|----------|--------------------------|
 | `project2-type1` | Visible | 1 (AI-Single) |
 | `project2-type2` | Hidden | 0 (Control) |
@@ -54,28 +54,27 @@ The interface has three base configurations, differing only in the AI panel on P
 
 To use a specific configuration, edit `src/config/projectConfig.ts`:
 
-\```ts
+```ts
 export let CURRENT_PROJECT_VARIANT: ProjectVariant = 'project2-type1';
-\```
+```
 
 Setting the variant to `project2-random` randomly assigns one of the three configurations per participant at session start. The assignment is stored in `sessionStorage` and remains consistent within the same browser tab; a new assignment is made when the tab is closed and reopened:
 
-\```ts
+```ts
 export let CURRENT_PROJECT_VARIANT: ProjectVariant = 'project2-random';
-\```
+```
 
 ### Customization
 
 - **Reading materials and AI interpretations**: Edit `src/pageInfo.ts`
 - **Page order or inclusion**: Edit the `pageInfo` array in `src/pageInfo.ts`. The array defines one loop through the per-poem pages; the study repeats this loop once per poem. Comment out any entry to skip that page:
 
-\```js
+```js
 [
     { page4_1 },
     { page5_1 }
     // { page6_1 },  // comment out to skip the post-task subjective experience ratings
 ]
-\```
+```
 
 - **AI panel behavior**: Adjust `showAiAnswers` (whether the AI panel appears) and `aiAnswerCount` (number of interpretations shown) in `src/config/projectConfig.ts` to create new configurations beyond the three base ones.
-
