@@ -1,8 +1,8 @@
-# AI and Close Reading - Interface
-
 <p align="center">
   <img src="AI_CR_cover/AI_CR_cover.jpg" width="800" alt="Study interface">
 </p>
+
+# AI and Close Reading - Interface
 
 This repository contains the interface code for the experiment in the paper *["AI and Close Reading"](https://doi.org/placeholder)* (CHI 2026). The interface was used to study how AI assistance affects participants' interpretive performance and the pleasure they derive from close reading poems.
 
