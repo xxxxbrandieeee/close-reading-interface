@@ -68,6 +68,12 @@ Setting the variant to `project2-random` randomly assigns one of the three confi
 export let CURRENT_PROJECT_VARIANT: ProjectVariant = 'project2-random';
 ```
 
+To enable sending participant responses to the backend, set `IS_COLLECT_DATA` to `true` in `src/config/projectConfig.ts`. Set it to `false` to test the frontend without collecting any data:
+```ts
+// Whether to collect user data
+export const IS_COLLECT_DATA = false;
+```
+
 ### Customization
 
 The interface supports customization: selecting one of the three pre-built AI configurations or defining a new one, adjusting the number of poems, controlling which pages are included in each loop, and replacing the reading materials and AI interpretations.
