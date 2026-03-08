@@ -70,7 +70,6 @@ export let CURRENT_PROJECT_VARIANT: ProjectVariant = 'project2-random';
 
 To enable sending participant responses to the backend, set `IS_COLLECT_DATA` to `true` in `src/config/projectConfig.ts`. Set it to `false` to test the frontend without collecting any data:
 ```ts
-// Whether to collect user data
 export const IS_COLLECT_DATA = false;
 ```
 
