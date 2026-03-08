@@ -21,7 +21,6 @@ If you have any questions, please contact Jiayin Zhi at jzhi@uchicago.edu.
 ├── close-reading/     # Frontend (React + TypeScript)
 └── backend/           # Backend (Node.js + Express)
 ```
-
 ---
 
 ## Frontend (`close-reading/`)
