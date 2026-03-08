@@ -1,0 +1,25 @@
+.page7_content {
+    display: flex;
+    flex-direction: column;
+    max-width: 70%;
+    margin: 0 auto;
+    padding: 20px;
+    overflow: auto;
+    padding-bottom: 100px;
+    padding: 20px 60px;
+}
+
+.page7_item{
+    margin-bottom: 10px;
+    margin-top: 20px;
+    font-weight: 500px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.page7_textarea{
+    margin-bottom: 30px;
+}
+
+
+
