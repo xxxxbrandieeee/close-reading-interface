@@ -6,10 +6,9 @@
 
 This repository contains the interface code for the experiment in the paper *[What Does AI Do for Cultural Interpretation? A Randomized Experiment on Close Reading Poems with Exposure to AI Interpretation](https://doi.org/10.1145/3772318.3791727)*. The interface was used to study how AI assistance affects participants' interpretive performance and the pleasure they derive from close reading poems. The interface is designed to be reusable for human-centered experiments studying AI's impact on literary interpretation and other reading and writing tasks. Users can select from three base configurations (no AI assistance, single AI interpretation, and multiple AI interpretations), which can be used individually or randomly assigned. The number of reading materials, the pages included in each loop, and the AI panel behavior can be configured.
 
-For trying out the study activity and a summary of the paper, please visit our [project website](https://closereading-ai.app).
-
+- The data dictionary is available at [data dictionary](https://github.com/xxxxbrandieeee/close-reading-data-dictionary).
+- For trying out the study activity and a summary of the paper, please visit our [project website](https://closereading-ai.app).
 - Main study data, behavioral data, and analysis code are available at [data and analysis](https://placeholder).
-- The data dictionary is available at [data dictionary](https://placeholder).
 
 If you have any questions, please contact Jiayin Zhi at jzhi@uchicago.edu.
 
