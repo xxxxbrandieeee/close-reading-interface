@@ -8,7 +8,6 @@ This repository contains the interface code for the experiment in the paper *[Wh
 
 - The data dictionary is available at [data dictionary](https://github.com/xxxxbrandieeee/close-reading-data-dictionary).
 - For trying out the study activity and a summary of the paper, please visit our [project website](https://closereading-ai.app).
-- Main study data, behavioral data, and analysis code are available at [data and analysis](https://placeholder).
 
 If you have any questions, please contact Jiayin Zhi at jzhi@uchicago.edu.
 
